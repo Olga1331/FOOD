@@ -1,6 +1,5 @@
-function timer() {
+function timer(id, deadline) {
  
-    const deadline ='2021-06-02';
     // функция сколько времени осталось
         function getTimeRemaining(endtime) {
             const t = Date.parse(endtime) - Date.parse(new Date()),
@@ -56,7 +55,7 @@ function timer() {
         }
     }
     
-        setClock('.timer',deadline);
+        setClock(id,deadline);
 }
 
 export default timer;

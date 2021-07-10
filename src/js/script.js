@@ -6,16 +6,29 @@ import cards from './modules/cards';
 import forms from './modules/forms';
 import timer from './modules/timer';
 import slider from './modules/slider';
+import {openModal} from './modules/modal';
+
 
 window.addEventListener('DOMContentLoaded', () => {
-    
 
-    tabs();
-    modal();
+    const timerOpenModal = setTimeout( () => openModal('.modal', timerOpenModal), 50000);
+
+    tabs('.tabheader__item','.tabcontent','.tabheader__items', 'tabheader__item_active');
+    modal('[data-modal]','.modal', timerOpenModal);
     calc();
     cards();
-    forms();
-    timer();
-    slider();
+    forms('form', timerOpenModal);
+    timer('.timer', '2021-07-11');
+    slider({
+        container: '.offer__slider',
+        slide: '.offer__slide',
+        nextArrow: '.offer__slider-next',
+        prevArrow: '.offer__slider-prev',
+        totalCounter: '#total',
+        currentCounter: '#current',
+        wrapper: '.offer__slider-wrapper',
+        inner: '.offer__slider-inner'
+
+    });
  
 });
