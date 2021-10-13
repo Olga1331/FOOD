@@ -13,3 +13,5 @@
 *	LocalStorage
 *	ES6 Modules
 *	Webpack
+### DEMO
+[FOOD](http://dailyfood.zzz.com.ua/)
